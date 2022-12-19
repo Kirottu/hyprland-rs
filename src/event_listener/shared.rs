@@ -225,7 +225,7 @@ pub(crate) fn event_parser(event: String) -> io::Result<Vec<Event>> {
                 None => panic!("Regex has no captures"),
             }
         } else {
-            panic!("something has went down -{:#?}-", matches_event)
+            continue;
         };
 
         if matches_event.len() == 1 {

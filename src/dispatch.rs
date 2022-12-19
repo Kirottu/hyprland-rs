@@ -274,13 +274,13 @@ fn gen_dispatch_str(cmd: DispatchType) -> io::Result<String> {
         ),
         DispatchType::MoveFocusedWindowToWorkspace(identifier) => {
             format!(
-                "workspace {}",
+                "movetoworkspace {}",
                 match_workspace_identifier(identifier.clone())
             )
         }
         DispatchType::MoveFocusedWindowToWorkspaceSilent(identifier) => {
             format!(
-                "workspace {}",
+                "movetoworkspacesilent {}",
                 match_workspace_identifier(identifier.clone())
             )
         }
